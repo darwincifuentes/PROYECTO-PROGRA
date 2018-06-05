@@ -27,9 +27,9 @@ namespace PROYECTO_PROGRA
         {
             // BUSCAR CLIENTE POR NIT CASO CONTRARIO REGISTRAR EL CLIENTE
 
-            string fileName = @"C:\Users\magas\Desktop\Nueva carpeta\PROYECTO PROGRA\PROYECTO PROGRA\bin\Debug\Clientes.txt";
-
-            FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            string fileName = @"C: \Users\Darwin Rodrigo\Desktop\programacion u\progra 3\PROYECTO PROGRA\PROYECTO PROGRA\bin\Debug\Clientes.txt";
+            
+             FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
             while (reader.Peek() > -1)
             {

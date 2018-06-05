@@ -14,6 +14,7 @@ namespace PROYECTO_PROGRA
     public partial class InventarioProductos : Form
     {
         List<CInventario> inve = new List<CInventario>();
+        
         public InventarioProductos()
         {
             
@@ -71,6 +72,11 @@ namespace PROYECTO_PROGRA
             MENU menu = new MENU();
             menu.Show();
             this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
