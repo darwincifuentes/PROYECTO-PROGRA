@@ -9,11 +9,12 @@ namespace PROYECTO_PROGRA
     class CInventario
     {
         string producto;
-        int cantidad;
+        string cantidad;
         string precio;
 
         public string Precio { get => precio; set => precio = value; }
-        public int Cantidad { get => cantidad; set => cantidad = value; }
+       
         public string Producto { get => producto; set => producto = value; }
+        public string Cantidad { get => cantidad; set => cantidad = value; }
     }
 }

@@ -24,7 +24,6 @@ namespace PROYECTO_PROGRA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int cont = 0;
                 string clave;
                 clave = Microsoft.VisualBasic.Interaction.InputBox("Ingrese Codigo", "Codigo de Verificacion", "Codigo:", 500, 300);
                 if (clave == "1234")

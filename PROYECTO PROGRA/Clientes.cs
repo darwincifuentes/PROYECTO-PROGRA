@@ -13,8 +13,8 @@ namespace PROYECTO_PROGRA
 {
     public partial class Clientes : Form
     {
-        List<CCliente> ctemp = new List<CCliente>();
-        int posicionmodificar;
+      static  List<CCliente> ctemp = new List<CCliente>();
+       static  int posicionmodificar;
         public Clientes()
         {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace PROYECTO_PROGRA
 
         private void button1_Click(object sender, EventArgs e)
         {
+          
             CCliente tempal = new CCliente();                   // REGISTRA CLIENTES EN ARCHIVO TXT
             tempal.Nit = textBox1.Text;
             tempal.Nombre= textBox2.Text;
@@ -50,10 +51,7 @@ namespace PROYECTO_PROGRA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <ctemp.Count; i++)
-            {
-                if (textBox3)
-            }
+            
             string fileName = "Clientes.txt";                       // MOSTRAR CLIENTES EN DATAGRIDVIEW
             //Abrimos el archivo, en este caso lo abrimos para lectura
             FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -85,6 +83,7 @@ namespace PROYECTO_PROGRA
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             string fileName = @"C: \Users\Darwin Rodrigo\Desktop\programacion u\progra 3\PROYECTO PROGRA\PROYECTO PROGRA\bin\Debug\Clientes1.txt";
 
             FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -122,13 +121,15 @@ namespace PROYECTO_PROGRA
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             //Los datos modificados de los textbox, se sobreescriben en la posición donde se encontró el dato
             ctemp[posicionmodificar].Nombre = textBox2.Text;
             ctemp[posicionmodificar].Apellido = textBox3.Text;
             ctemp[posicionmodificar].Nit = textBox1.Text;
-
+            
 
             string fileName = @"C: \Users\Darwin Rodrigo\Desktop\programacion u\progra 3\PROYECTO PROGRA\PROYECTO PROGRA\bin\Debug\Clientes1.txt";
+
 
             //Para que sobreescriba los datos existentes se usa CREATE
             FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
@@ -147,6 +148,11 @@ namespace PROYECTO_PROGRA
 
             //Cerrar el archivo
             writer.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
